@@ -14,6 +14,7 @@ Leer datos de números desde un archivo csv y clasificarlos. Escribir la lista o
 🔗 Código de referencia en canvas:
 - 🔢 qsort.c
 - 📂 fileHandler.cpp
+  
 
 ## 📦 Entregables
 
@@ -24,6 +25,23 @@ Leer datos de números desde un archivo csv y clasificarlos. Escribir la lista o
 ## 🛠️ Materiales
 
 Necesitará una máquina virtual con Linux.
+
+## 💣 Ejecución
+
+### Version NO paralela
+
+``sudo g++ Ejercicio1.cpp -o Ejercicio1``
+``./Ejercicio1``
+
+### Version paralela INICIAL
+
+``sudo g++ -fopenmp Ejercicio2Inicial.cpp -o Ejercicio2Inicial``
+``./Ejercicio2Inicial``
+
+### Version paralela FINAL
+
+``sudo g++ -fopenmp Ejercicio2Final.cpp -o Ejercicio2Final``
+``./Ejercicio2Final``
 
 ## 📚 Contenido
 

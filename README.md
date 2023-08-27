@@ -30,17 +30,26 @@ Necesitará una máquina virtual con Linux.
 
 ### Version NO paralela
 
-``sudo g++ Ejercicio1.cpp -o Ejercicio1``
+``sudo g++ Ejercicio1.cpp -o Ejercicio1`` 
+
+Luego:
+
 ``./Ejercicio1``
 
 ### Version paralela INICIAL
 
 ``sudo g++ -fopenmp Ejercicio2Inicial.cpp -o Ejercicio2Inicial``
+
+Luego:
+
 ``./Ejercicio2Inicial``
 
 ### Version paralela FINAL
 
 ``sudo g++ -fopenmp Ejercicio2Final.cpp -o Ejercicio2Final``
+
+Luego:
+
 ``./Ejercicio2Final``
 
 ## 📚 Contenido

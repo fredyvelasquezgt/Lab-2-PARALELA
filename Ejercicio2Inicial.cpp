@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <cstdlib>      // Para funciones rand() y srand()
-#include <ctime>        // Para la función time()
+#include <cstdlib>
+#include <ctime>
 #include <omp.h>
+
 #define INFILE "numeros_aleatorios.csv"
 #define OUTFILE "numeros_ordenados.csv"
 
@@ -38,8 +39,14 @@ int main() {
     }
     inFile.close();
 
+    // Iniciar el cronómetro
+    double start_time = omp_get_wtime();
+
     // Clasificar números
     quickSort(array, 0, N - 1);
+
+    // Detener el cronómetro y calcular el tiempo transcurrido
+    double elapsed_time = omp_get_wtime() - start_time;
 
     // Escribir números clasificados en el archivo OUTFILE
     ofstream sortedFile(OUTFILE);
@@ -53,6 +60,7 @@ int main() {
     delete[] array;
 
     cout << "Proceso completado. Números generados y ordenados correctamente." << endl;
+    cout << "Tiempo transcurrido: " << elapsed_time << " segundos." << endl;
     return 0;
 }
 
